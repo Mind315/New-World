@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Code+Pro:wght@400;500&display=swap");
+/* ------------------common styles */
+body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+.container {
+    max-width: 980px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+p {
+    color: #6a859c;
+    line-height: 1.8;
+}
+.section--dark {
+    background-color: #222233;
+}
+.section--dark * {
+    color: #ffffff;
+}
+.section--dark .title {
+    color: #ffffff;
+}
+.section--dark .description {
+    color: #e8e8e8;
+}
+.common-section {
+    text-align: center;
+    padding: 80px 0;
+}
+.title-container {
+    margin-bottom: 50px;
+}
+.title {
+    font-size: 30px;
+    line-height: 36px;
+    color: #676770;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.description {
+    font-size: 16px;
+    line-height: 20px;
+    color: #676770;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* ---------------header */
+.header {
+    position: fixed;
+    background-color: #e7e7e7;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    z-index: 100;
+    -webkit-box-shadow: 0px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+    -moz-box-shadow: 0px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+    box-shadow: 0px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+}
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 25px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #69b9ff;
+}
+.header__nav ul {
+    display: flex;
+}
+.header__nav li + li {
+    margin-left: 40px;
+}
+.header__nav a {
+    font-size: 16px;
+    color: #676770;
+    transition: color 0.3s;
+}
+.header__nav a:hover {
+    color: #0082f3;
+}
+.header__nav a:active {
+    color: #064d8b;
+}
+
+/* ------------------- main */
+.main {
+}
+/*  ----------------- welcome */
+
+.welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 195px 0;
+    color: #ffffff;
+    background-color: #222233;
+    background-image: url("img/welcome-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 600px;
+    height: 100vh;
+}
+.welcome__title {
+    font-size: 70px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+.welcome__links-container {
+    margin-top: 60px;
+}
+.link {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    padding: 10px 35px;
+    transition: 0.5s;
+}
+.welcome .link_sign {
+    margin-right: 10px;
+    background-color: #0082f3;
+    border: 1px solid transparent;
+}
+.welcome .link_sign:hover {
+    transform: translateY(-3px);
+}
+.welcome .link_sign:active {
+    background-color: #0358a3;
+}
+.welcome .link_learn-more:hover {
+    transform: translateY(-5px);
+}
+.welcome .link_learn-more:active {
+    background-color: #0358a3;
+    border: 1px solid #0358a3;
+}
+
+/* --------------------- about */
+.doinng {
+    text-align: center;
+}
+
+.doing__cards-container {
+    display: flex;
+    justify-content: space-between;
+}
+.doing__card {
+    width: 300px;
+    border: 1px solid rgb(209, 207, 207);
+    border-radius: 6px;
+    padding: 40px 20px;
+}
+.doing__card img {
+    width: 94px;
+    height: 94px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+.doing__card h4 {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 6px;
+    color: #676770;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* --------- services */
+.services__cards-container {
+    display: flex;
+    justify-content: space-between;
+}
+.services__card {
+    width: 45%;
+}
+.services__card + .services__card {
+    margin-left: 5%;
+}
+.services__card h4 {
+    font-size: 20px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+.services__card img {
+    margin-bottom: 20px;
+}
+.services__card p {
+    margin-bottom: 20px;
+}
