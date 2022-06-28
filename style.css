@@ -187,9 +187,9 @@ p {
 .services__card {
     width: 45%;
 }
-.services__card + .services__card {
+/* .services__card + .services__card {
     margin-left: 5%;
-}
+} */
 .services__card h4 {
     font-size: 20px;
     letter-spacing: 4px;
@@ -290,4 +290,92 @@ p {
     background-color: #383838;
     padding: 40px 0;
     color: #676770;
+}
+
+@media screen and (max-width: 900px) {
+    .doing__cards-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+    .footer__description h4 {
+        letter-spacing: 2px;
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 760px) {
+    .common-section {
+        padding: 40px 0;
+    }
+    .welcome__title {
+        font-size: 50px;
+    }
+    .services__cards-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .services__card {
+        min-width: 300px;
+    }
+    .tabs .tabs__nav button {
+        display: block;
+        margin: 5px auto;
+        width: 50%;
+        padding: 10px 30px;
+    }
+    .footer__description {
+        padding-top: 0;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-container > * {
+        width: 50%;
+    }
+    .footer__about {
+        width: 70%;
+    }
+    .footer__social img {
+        position: absolute;
+        left: 0;
+    }
+    .footer__description .footer__social li::after {
+        width: 100%;
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .logo {
+        font-size: 16px;
+        letter-spacing: 0;
+    }
+    .header__nav li + li {
+        margin-left: 6px;
+    }
+    .header__nav a {
+        font-size: 13px;
+    }
+    .link {
+        display: block;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .welcome .link_sign {
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+    .doing__card {
+        max-width: 300px;
+    }
+    .tabs .tabs__nav button {
+        width: 75%;
+    }
 }
