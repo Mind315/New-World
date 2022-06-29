@@ -218,6 +218,14 @@
             anchors.forEach((item) => {
                 item.addEventListener("click", function (event) {
                     event.preventDefault();
+
+                    const id = item.getAttribute("href");
+                    const elemToMove = document.querySelector(id);
+
+                    window.scrollTo({
+                        top: elemToMove.offsetTop - 40,
+                        behavior: "smooth",
+                    });
                 });
             });
         </script>
