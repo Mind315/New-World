@@ -14,14 +14,14 @@
                 <h1 class="logo">NEW WORLD</h1>
                 <nav class="header__nav">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Contacts</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="#main">Home</a></li>
+                        <li><a href="#tabs">Tabs</a></li>
+                        <li><a href="#contacts">Contacts</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
-        <main class="main">
+        <main class="main" id="main">
             <section class="welcome">
                 <div class="container">
                     <h2 class="welcome__title">THIS IS A NEW WORLD</h2>
@@ -98,7 +98,7 @@
                 </div>
             </section>
 
-            <section class="tab-section common-section">
+            <section class="tab-section common-section" id="tabs">
                 <div class="container">
                     <div class="title-container">
                         <h3 class="title">TAB SECTION</h3>
@@ -107,14 +107,36 @@
 
                     <div class="tabs">
                         <div class="tabs__nav">
-                            <button class="active" type="button">Tab Button 1</button>
-                            <button type="button">Tab Button 2</button>
-                            <button type="button">Tab Button 3</button>
+                            <button data-index="0" class="active" type="button">Tab Button 1</button>
+                            <button data-index="1" type="button">Tab Button 2</button>
+                            <button data-index="2" type="button">Tab Button 3</button>
                         </div>
 
                         <div class="tabs__item">
-                            <img src="img/tab-img.jpg" alt="man" />
+                            <img src="img/planet-1.jpg" alt="man" />
                             <h4>SOME TITLE HERE</h4>
+                            <div class="tabs__desc">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore repudiandae, veritatis reprehenderit
+                                    sed, facere labore architecto obcaecati corporis eveniet, non recusandae vel perferendis natus esse
+                                    earum ullam! Quae, quis. Unde.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tabs__item hide">
+                            <img src="img/planet-2.jpg" alt="man" />
+                            <h4>ANOTHER TITLE HERE</h4>
+                            <div class="tabs__desc">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore repudiandae, veritatis reprehenderit
+                                    sed, facere labore architecto obcaecati corporis eveniet, non recusandae vel perferendis natus esse
+                                    earum ullam! Quae, quis. Unde.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tabs__item hide">
+                            <img src="img/planet-3.jpg" alt="man" />
+                            <h4>THIS IS A TITLE HERE</h4>
                             <div class="tabs__desc">
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore repudiandae, veritatis reprehenderit
@@ -127,7 +149,7 @@
                 </div>
             </section>
 
-            <footer class="footer">
+            <footer class="footer" id="contacts">
                 <div class="footer__description">
                     <div class="container footer-container">
                         <div class="footer__about">
@@ -164,5 +186,40 @@
                 </div>
             </footer>
         </main>
+        <script>
+            const tabButtons = document.querySelectorAll(".tabs__nav button");
+            const tabItems = document.querySelectorAll(".tabs__item");
+
+            tabButtons.forEach((elem) => {
+                elem.addEventListener("click", () => {
+                    hideTabsBtns();
+                    showTab(Number(elem.dataset.index));
+                });
+            });
+
+            function hideTabsBtns() {
+                tabItems.forEach(function (item) {
+                    item.classList.add("hide");
+                    item.classList.remove("fade-in");
+                });
+                tabButtons.forEach(function (item) {
+                    item.classList.remove("active");
+                });
+            }
+
+            function showTab(index) {
+                tabItems[index].classList.add("fade-in");
+                tabItems[index].classList.remove("hide");
+                tabButtons[index].classList.add("active");
+            }
+
+            const anchors = document.querySelectorAll(".header__nav a");
+
+            anchors.forEach((item) => {
+                item.addEventListener("click", function (event) {
+                    event.preventDefault();
+                });
+            });
+        </script>
     </body>
 </html>

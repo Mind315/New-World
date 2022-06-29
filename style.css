@@ -48,6 +48,20 @@ p {
     letter-spacing: 3px;
     text-transform: uppercase;
 }
+.hide {
+    display: none;
+}
+.fade-in {
+    animation: fadeIn 0.5s linear forwards;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 /* ---------------header */
 .header {
@@ -142,7 +156,7 @@ p {
     background-color: #0358a3;
 }
 .welcome .link_learn-more:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 .welcome .link_learn-more:active {
     background-color: #0358a3;
@@ -201,7 +215,9 @@ p {
 .services__card p {
     margin-bottom: 20px;
 }
-
+.link_learn-more:hover {
+    transform: translateY(-3px);
+}
 /* ------------- tab-section */
 
 .tabs__nav {
@@ -215,16 +231,21 @@ p {
     background-color: #92a0ad;
     border-radius: 4px;
     padding: 3px 30px;
+    transition: all 0.3s;
 }
 .tabs__nav button + button {
     margin-left: 10px;
 }
-
+.tabs__nav button:hover {
+    background-color: rgb(83, 98, 109);
+}
 .tabs__nav button.active {
     background-color: #2e80b6;
 }
 .tabs__item img {
     margin-bottom: 15px;
+    max-height: 300px;
+    width: 450px;
 }
 .tabs__item h4 {
     color: #676770;
@@ -290,6 +311,9 @@ p {
     background-color: #383838;
     padding: 40px 0;
     color: #676770;
+}
+.footer a:hover {
+    color: #0082f3;
 }
 
 @media screen and (max-width: 900px) {
