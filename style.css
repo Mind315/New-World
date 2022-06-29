@@ -15,7 +15,7 @@ p {
     line-height: 1.8;
 }
 .section--dark {
-    background-color: #222233;
+    background-image: linear-gradient(to bottom right, #38a2d7, #561139);
 }
 .section--dark * {
     color: #ffffff;
@@ -112,7 +112,7 @@ p {
 .welcome {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     text-align: center;
     padding: 195px 0;
     color: #ffffff;
@@ -146,7 +146,7 @@ p {
 }
 .welcome .link_sign {
     margin-right: 10px;
-    background-color: #0082f3;
+    background-image: linear-gradient(to bottom right, #121c84, #8278da);
     border: 1px solid transparent;
 }
 .welcome .link_sign:hover {
@@ -308,9 +308,12 @@ p {
 }
 .footer__copyright {
     text-align: center;
-    background-color: #383838;
+    background-image: linear-gradient(to bottom right, #38a2d7, #561139);
     padding: 40px 0;
     color: #676770;
+}
+.footer__copyright p {
+    color: #ffffff;
 }
 .footer a:hover {
     color: #0082f3;
